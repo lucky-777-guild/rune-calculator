@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ツールメニュー</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111827;
+      color: #f9fafb;
+      margin: 0;
+      padding: 24px;
+    }
+    .container {
+      max-width: 520px;
+      margin: 0 auto;
+      background: #1f2937;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .menu-btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 16px;
+      background: #2563eb;
+      color: white;
+      font-size: 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .menu-btn:hover {
+      background: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ツールメニュー</h1>
+
+    <a class="menu-btn" href="rune/index.html">ルーンスコア増加量</a>
+    <a class="menu-btn" href="guild/index.html">ギルド占領戦 役割整理ツール</a>
+    <a class="menu-btn" href="youtube/index.html">YouTubeリンク集</a>
+
+  </div>
+</body>
+</html>

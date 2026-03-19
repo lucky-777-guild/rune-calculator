@@ -1,4 +1,55 @@
-<html>
-  <tytle>ルーン計算</tytle>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ルーンスコア増加量</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ルーンスコア増加量</h1>
+
+    <div class="section">
+      <label class="label">ルーンの種類</label>
+      <select id="runeType">
+        <option value="0.03">狩人（ボスダメージ）</option>
+        <option value="0.06">２</option>
+        <option value="0.09">３</option>
+        <option value="0.12">４</option>
+        <option value="0.15">５</option>
+        <option value="0.18">６</option>
+      </select>
+    </div>
+
+    <div class="section">
+      <label class="label">ブロ像</label>
+      <select id="broType">
+        <option value="myth">神話</option>
+        <option value="legend">レジェンド</option>
+        <option value="none">未所持</option>
+      </select>
+    </div>
+
+    <div class="section" id="percentBox">
+      <label class="label">ブロ像 %</label>
+      <input id="percent" type="number" value="0" class="input">
+    </div>
+
+    <div class="section">
+      <label class="label">ポセイドン</label>
+      <select id="pet">
+        <option value="0.15">30lv</option>
+        <option value="0.20">10lv</option>
+        <option value="0">未所持</option>
+      </select>
+    </div>
+
+    <button id="calcBtn">計算</button>
+
+    <div class="result" id="result">結果表示</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
-  

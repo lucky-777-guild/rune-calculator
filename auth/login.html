@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログイン</title>
+</head>
+<body>
+
+  <h2>ログイン</h2>
+
+  <label>PID</label><br>
+  <input id="pid"><br><br>
+
+  <button onclick="login()">ログイン</button>
+
+  <p><a href="register.html">新規登録はこちら</a></p>
+
+<script>
+async function login() {
+  const pid = document.getElementById("pid").value;
+
+  if (!pid) {
+    alert("PIDを入力してください");
+    return;
+  }
+
+  const res = await fetch("http://localhost:3000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pid })
+  });
+
+  const data = await res.json();
+
+  if (data.error) {
+    alert(data.error);
+  } else {
+    // ログイン成功 → トークンとニックネームを保存
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("nickname", data.nickname);
+
+    alert("ログイン成功！");
+    location.href = "../index.html"; // メニューへ
+  }
+}
+</script>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
     return;
   }
 
-  const res = await fetch("http://192.168.1.8:3000/auto-login", {
+  const res = await fetch("http://217.142.226.174:3000/auto-login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ token })
